@@ -52,7 +52,7 @@ The final playbook output will be the nodes (workers might not be ready, no worr
 
 To use the cluster form your machine, get the config file
 ```
-$ cp root@master-node01:/root/.kube/config $HOME/.kube/config2 
+$ scp root@master-node01:/root/.kube/config $HOME/.kube/config2 
 ```
 ```
 $ kubectl get pods --kubeconfig=$HOME/.kube/config2
