@@ -20,11 +20,11 @@ Clone the project
 ```
 Customize the parameters in v8s.sh according to your needs, by default
 
-Kubeadm version 1.32
-Runc version 1.3.0
-containerd version 2.1.4
-Pod CIDR for CNI 10.244.0.0/16
-Flannel version .27.2
+* Kubeadm version 1.32
+* Runc version 1.3.0
+* containerd version 2.1.4
+* Pod CIDR for CNI 10.244.0.0/16
+* Flannel version .27.2
 
 Get the name of the network interface you want to use to connect to the VMs, it will be bridged.
 
