@@ -42,12 +42,15 @@ It will run vagrant to create the VMs.
 Then an ansible playbook will configure the nodes
 
 The final setup will be 
-1 controleplane
-2 worker nodes
+* 1 controleplane
+* 2 worker nodes
+
 
 The final playbook output will be the nodes (workers might not be ready, no worries let them some time)
 
-To use it form your machine, get th econfig file
+## Post install
+
+To use the cluster form your machine, get the config file
 ```
 $ cp root@master-node01:/root/.kube/config $HOME/.kube/config2 
 ```
