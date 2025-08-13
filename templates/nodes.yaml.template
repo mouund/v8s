@@ -1,20 +1,20 @@
 ---
 - name: master-node01
-  box: "bento/ubuntu-24.04"
+  box: "alvistack/ubuntu-24.04"
   ram: "2048"
   public_ip: ${MASTER_IP}
   network_interface: $NIC
   network_type: "public_network"
   hostname: master-node01
 - name: worker-node01
-  box: "bento/ubuntu-24.04"
+  box: "alvistack/ubuntu-24.04"
   public_ip: ${WORKER_IP}
   network_interface: $NIC
   network_type: "public_network"
   ram: 2048
   hostname: worker-node01
 - name: worker-node02
-  box: "bento/ubuntu-24.04"
+  box: "alvistack/ubuntu-24.04"
   public_ip: ${WORKER2_IP}
   network_interface: $NIC
   network_type: "public_network"
