@@ -13,6 +13,7 @@
   community.general.modprobe:
     name: br_netfilter
     state: present
+    persistent: present
 
 - name: set ip forwarding
   ansible.posix.sysctl:
