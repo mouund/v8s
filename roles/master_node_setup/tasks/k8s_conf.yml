@@ -14,8 +14,11 @@
 - name: export kubeconfig
   shell: rm -rf $HOME/.kube/ && mkdir -p $HOME/.kube && cp -i /etc/kubernetes/admin.conf $HOME/.kube/config && chown $(id -u):$(id -g) $HOME/.kube/config
 
-- name: apply flannel cni
-  shell: kubectl apply -f "{{ flannel_url }}"
+- name: add custom interface and apply the deployment
+  shell: wget "{{ flannel_url }}"
+
+- name: add custom interface and apply the deployment
+  shell: sed '/- --kube-subnet-mgr/a  \ \ \ \ \ \ \ \ - --iface=eth1' kube-flannel.yml  | kubectl apply -f -
 
 - name: capture join command
   shell: cat output.txt  | grep -A 1 "kubeadm join"
