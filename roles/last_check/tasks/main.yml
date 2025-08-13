@@ -1,0 +1,6 @@
+---
+- include_tasks: last_check.yml
+  name: "last_check"
+  args:
+    apply:
+      become: true

@@ -1,0 +1,29 @@
+---
+- include_tasks: upgrade.yml
+  args:
+    apply:
+      become: true
+- include_tasks: system.yml
+  args:
+    apply:
+      become: true
+- include_tasks: add-kub-repo.yml
+  args:
+    apply:
+      become: true
+- include_tasks: components.yml
+  args:
+    apply:
+      become: true
+- include_tasks: files.yml
+  args:
+    apply:
+      become: true
+- include_tasks: install.yml
+  args:
+    apply:
+      become: true
+- include_tasks: services.yml
+  args:
+    apply:
+      become: true

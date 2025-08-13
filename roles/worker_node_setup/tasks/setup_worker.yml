@@ -1,0 +1,6 @@
+---
+- name: add node ip to kubelet conf
+  shell: echo KUBELET_EXTRA_ARGS=--node-ip="{{ ansible_ssh_host }}" | tee /etc/default/kubelet
+  
+- name: run join commands on workers
+  shell: "{{ hostvars['localhost']['join_command'].stdout }}"

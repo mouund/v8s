@@ -1,0 +1,12 @@
+---
+- name: Kubeadm init master node
+  shell: kubeadm reset --force && kubeadm init --apiserver-advertise-address "{{ ansible_ssh_host }}" --pod-network-cidr="{{ network_pod_cidr }}" | tee output.txt
+
+- name: add node ip to kubelet conf
+  shell: echo KUBELET_EXTRA_ARGS=--node-ip="{{ ansible_ssh_host }}" | tee /etc/default/kubelet
+
+- name: Start kubelet service
+  ansible.builtin.service:
+    name: kubelet
+    daemon_reload: true
+    state: restarted

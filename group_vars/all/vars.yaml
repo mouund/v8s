@@ -1,0 +1,24 @@
+---
+# vars file for packages
+packages:
+  - apt-transport-https 
+  - ca-certificates 
+  - curl 
+  - gpg
+  - kubelet 
+  - kubeadm
+  - kubectl
+
+lock_packages:
+  - kubelet 
+  - kubeadm
+  - kubectl
+
+containerd_url: "https://github.com/containerd/containerd/releases/download/v2.1.4/containerd-2.1.4-linux-amd64.tar.gz"
+runc_url: "https://github.com/opencontainers/runc/releases/download/v1.3.0/runc.amd64"
+
+k8s_url_apt_key: "https://pkgs.k8s.io/core:/stable:/v1.32/deb/Release.key"
+k8s_gpgpath: "/etc/apt/keyrings/kubernetes.key"
+k8s_repository: "https://pkgs.k8s.io/core:/stable:/v1.32/deb/"
+network_pod_cidr: 10.244.0.0/16
+flannel_url: "https://github.com/flannel-io/flannel/releases/download/v0.27.2/kube-flannel.yml"

@@ -1,0 +1,11 @@
+- name: Start containerd service
+  ansible.builtin.service:
+    name: containerd
+    state: started
+    enabled: yes
+- name: Start kubelet service
+  ansible.builtin.service:
+    name: kubelet
+    state: started
+    enabled: yes
+

@@ -1,0 +1,6 @@
+[masternodes]
+$MASTER_NAME ansible_host=${MASTER_IP} ansible_user=vagrant ansible_password=vagrant
+
+[workernodes]
+$WORKER_NAME ansible_host=${WORKER_IP} ansible_user=vagrant ansible_password=vagrant
+$WORKER2_NAME ansible_host=${WORKER2_IP} ansible_user=vagrant ansible_password=vagrant

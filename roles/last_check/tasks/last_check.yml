@@ -1,0 +1,6 @@
+---
+- name: add node ip to kubelet conf
+  shell: kubectl get nodes -o wide 
+  register: nodes
+
+- debug: msg="{{ nodes.stdout_lines }}"

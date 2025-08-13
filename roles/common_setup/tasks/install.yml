@@ -1,0 +1,13 @@
+---
+# tasks file for packages
+- name: Install packages from repo w/ APT
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ packages }}"
+
+- name: Prevent packages from being upgraded
+  dpkg_selections:
+    name: "{{ item }}"
+    selection: hold
+  loop: "{{ lock_packages }}"

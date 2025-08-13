@@ -1,0 +1,6 @@
+---
+- include_tasks: setup_worker.yml
+  name: "setup workers"
+  args:
+    apply:
+      become: true

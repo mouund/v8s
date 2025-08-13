@@ -1,0 +1,6 @@
+---
+# tasks file for files
+- name: "creating service files"
+  ansible.builtin.copy:
+    src: "containerd.service"
+    dest: /etc/systemd/system/

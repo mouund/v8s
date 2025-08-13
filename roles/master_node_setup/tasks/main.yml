@@ -1,0 +1,11 @@
+---
+- include_tasks: init.yml
+  name: "init k8s"
+  args:
+    apply:
+      become: true
+- include_tasks: k8s_conf.yml
+  name: "conf k8s"
+  args:
+    apply:
+      become: true

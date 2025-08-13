@@ -1,0 +1,10 @@
+- name: Add k8s gpg key
+  apt_key:
+    url: https://pkgs.k8s.io/core:/stable:/v1.32/deb/Release.key
+    state: present
+    keyring: "{{ k8s_gpgpath }}"
+    
+- name: Add k8s repo
+  apt_repository:
+    filename: kubernetes
+    repo: "deb [arch=amd64 signed-by={{ k8s_gpgpath }}] {{ k8s_repository }} /"

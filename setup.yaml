@@ -1,0 +1,24 @@
+---
+- name: common_setup
+  hosts: all
+  roles:
+   - role: common_setup
+     message: "Setting up nodes"
+
+- name: master_node_setup
+  hosts: masternodes
+  roles:
+   - role: master_node_setup
+     message: "Setting up master"
+
+- name: worker_node_setup
+  hosts: workernodes
+  roles:
+   - role: worker_node_setup
+     message: "Setting up workers"
+
+- name: last_check
+  hosts: masternodes
+  roles:
+   - role: last_check
+     message: "listing nodes"

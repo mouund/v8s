@@ -1,0 +1,12 @@
+- name: Unarchive binaries to /usr/local/bin/
+  unarchive:
+    src: "{{ containerd_url }}"
+    dest: "/usr/local/"
+    copy: no
+
+
+- name: Download binaries to /usr/local/sbin
+  ansible.builtin.get_url:
+    url: "{{ runc_url }}"
+    dest: "/usr/local/sbin/runc"
+    mode: '0755'
