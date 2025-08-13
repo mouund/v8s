@@ -6,9 +6,9 @@
 This project will deploy a "real" K8s cluster with one controleplane and two workers hosted in ubuntu VMs in Vbox. 
 Really handy to test some K8s related stuff.
 Technically:
-CNI: Flannel
-Container runtime: runc
-Container engine: containerd 
+* CNI: Flannel
+* Container runtime: runc
+* Container engine: containerd 
 
 ## How to use it
 
@@ -49,12 +49,12 @@ The final playbook output will be the nodes (workers might not be ready, no worr
 
 To use it form your machine, get th econfig file
 ```
-$ cp root@master-node01:/root/.kube/config ~/.kube/config2 
+$ cp root@master-node01:/root/.kube/config $HOME/.kube/config2 
 ```
 ```
-$ kubectl get pods --kubeconfig=/home/moun/.kube/config2
+$ kubectl get pods --kubeconfig=$HOME/.kube/config2
 OR 
-$ export KUBECONFIG=/home/moun/.kube/config2
+$ export KUBECONFIG=$HOME/.kube/config2
 ```
 Use it :D 
 
