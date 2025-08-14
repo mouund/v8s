@@ -6,9 +6,14 @@
 This project will deploy a "real" K8s cluster with one controleplane and two workers hosted in ubuntu VMs in Vbox. 
 Really handy to test some K8s related stuff.
 Technically:
-* CNI: Flannel
+* CNI: Flannel or Weave
 * Container runtime: runc
 * Container engine: containerd 
+
+> [!NOTE]  
+> If you want to use netpols, flannel doesn't support it, use the weave branch
+> See https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
 
 ## How to use it
 
