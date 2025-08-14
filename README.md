@@ -6,7 +6,7 @@
 This project will deploy a "real" K8s cluster with one controleplane and two workers hosted in ubuntu VMs in Vbox. 
 Really handy to test some K8s related stuff.
 Technically:
-* CNI: Flannel
+* CNI: Weave
 * Container runtime: runc
 * Container engine: containerd 
 
