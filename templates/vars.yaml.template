@@ -21,4 +21,4 @@ k8s_url_apt_key: "https://pkgs.k8s.io/core:/stable:/v${KUBEADM_VERSION}/deb/Rele
 k8s_gpgpath: "/etc/apt/keyrings/kubernetes.key"
 k8s_repository: "https://pkgs.k8s.io/core:/stable:/v${KUBEADM_VERSION}/deb/"
 network_pod_cidr: ${POD_CIDR}
-flannel_url: "https://github.com/flannel-io/flannel/releases/download/v${FLANNEL_CNI_VERSION}/kube-flannel.yml"
+weave_url: "https://github.com/weaveworks/weave/releases/download/v${WEAVE_CNI_VERSION}/weave-daemonset-k8s.yaml"
