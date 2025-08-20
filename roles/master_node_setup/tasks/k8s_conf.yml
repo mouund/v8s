@@ -2,9 +2,14 @@
 - name: export kubeconfig
   shell: rm -rf $HOME/.kube/ && mkdir -p $HOME/.kube && cp -i /etc/kubernetes/admin.conf $HOME/.kube/config && chown $(id -u):$(id -g) $HOME/.kube/config
 
+- name: Copy cilium install script
+  copy:
+    src: cilium_install.sh
+    dest: /root/
+    mode: u=rwx,g=r,o=r
 
-- name: apply weave deploy
-  shell: ubectl apply -f "{{ weave_url }}"
+- name: run cilium install script
+  shell: /root/cilium_install.sh
 
 - name: capture join command
   shell: cat output.txt  | grep -A 1 "kubeadm join"
