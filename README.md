@@ -1,6 +1,11 @@
 
 # v8s | e2e K8s cluster creation using Vagrant Ansible & Kubeadm in one command
 
+> [!NOTE]  
+> CNIs are different for each branch, check the one you want to use, currently there are flannel, weave and cilium
+> If you want to use netpols, flannel doesn't support it, use the weave branch
+> See https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
 ## What is it ?
 
 This project will deploy a "real" K8s cluster with one controleplane and two workers hosted in ubuntu VMs in Vbox. 
@@ -9,10 +14,6 @@ Technically:
 * CNI: Flannel or Weave
 * Container runtime: runc
 * Container engine: containerd 
-
-> [!NOTE]  
-> If you want to use netpols, flannel doesn't support it, use the weave branch
-> See https://kubernetes.io/docs/concepts/cluster-administration/addons/
 
 
 ## How to use it
