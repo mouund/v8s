@@ -6,7 +6,7 @@
 This project will deploy a "real" K8s cluster with one controleplane and two workers hosted in ubuntu VMs in Vbox. 
 Really handy to test some K8s related stuff.
 Technically:
-* CNI: Cilium
+* CNI: Cilium with IPsec encryption, traffic is encrypted only for pod traffic inter nodes. 
 * Container runtime: runc
 * Container engine: containerd 
 
@@ -79,6 +79,8 @@ worker-node02   Ready    <none>          14m   v1.32.7
 
 ```
 
+
+
 ## References
 
 * https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
@@ -87,5 +89,4 @@ worker-node02   Ready    <none>          14m   v1.32.7
 
 * https://github.com/opencontainers/runc
 
-* https://github.com/flannel-io/
-
+* https://docs.cilium.io/en/stable/security/network/encryption-ipsec/
