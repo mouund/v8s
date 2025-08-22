@@ -31,7 +31,7 @@ else
     export RUNC_VERSION=1.3.0
     export CONTAINERD_VERSION=2.1.4
     export POD_CIDR="10.244.0.0/16"
-    export FLANNEL_CNI_VERSION=0.27.2
+    export WEAVE_CNI_VERSION=2.8.1
 
 
 

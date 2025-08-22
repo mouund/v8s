@@ -4,7 +4,7 @@
 
 
 - name: apply weave deploy
-  shell: ubectl apply -f "{{ weave_url }}"
+  shell: kubectl apply -f "{{ weave_url }}"
 
 - name: capture join command
   shell: cat output.txt  | grep -A 1 "kubeadm join"
