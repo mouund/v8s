@@ -4,12 +4,12 @@
 
 - name: Copy cilium install script
   copy:
-    src: cilium_install_ipsec.sh
+    src: cilium_install_wg.sh
     dest: /root/
     mode: u=rwx,g=r,o=r
 
 - name: run cilium install script
-  shell: /root/cilium_install_ipsec.sh
+  shell: /root/cilium_install_wg.sh
 
 - name: capture join command
   shell: cat output.txt  | grep -A 1 "kubeadm join"
